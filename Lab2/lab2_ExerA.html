@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faculty Computer Science and Mathematics Day</title>
+</head>
+<body>
+
+    <!-- Header: Event name and tagline -->
+    <header>
+        <h1>Faculty Computer Science and Mathematics Day</h1>
+        <p>Learn, Create and Innovate Together!</p>
+    </header>
+
+    <!-- Navigation links -->
+    <nav>
+        <a href="#about">About the Event</a> |
+        <a href="#schedule">Event Schedule</a> |
+        <a href="#register">Registration</a>
+    </nav>
+
+    <!-- Section 1: About the Event -->
+    <section id="about">
+        <h2>About the Event</h2>
+        <p>FSKM Day introduces students to web development and technology.</p>
+
+        <!-- Article 1: Speaker -->
+        <article>
+            <h3>Introduction to Web Development</h3>
+            <p>Students will learn the basics of HTML and website development.</p>
+        </article>
+
+        <!-- Article 2: Activity -->
+        <article>
+            <h3>Mini Project Challenge</h3>
+            <p>Students will work together to create a simple technology project.</p>
+        </article>
+    </section>
+
+    <!-- Section 2: Event Schedule Table -->
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+
+        <table border="1">
+            <tr>
+                <th>Time</th>
+                <th>Activity</th>
+                <th>Venue</th>
+                <th>Person in Charge</th>
+            </tr>
+            <tr>
+                <td>8:30 AM</td>
+                <td>Registration</td>
+                <td>Main Hall</td>
+                <td>Organising Committee</td>
+            </tr>
+            <tr>
+                <td>9:00 AM</td>
+                <td>Opening Ceremony</td>
+                <td rowspan="2">Computer Lab 1</td>
+                <td>Event Coordinator</td>
+            </tr>
+            <tr>
+                <td>10:00 AM</td>
+                <td>HTML Workshop</td>
+                <td>Dr. Rosniza</td>
+            </tr>
+            <tr>
+                <td>12:00 PM</td>
+                <td colspan="3">Lunch Break</td>
+            </tr>
+            <tr>
+                <td>1:00 PM</td>
+                <td>Hackaton Challenge</td>
+                <td>Computer Lab 2</td>
+                <td>Dr. Hakim</td>
+            </tr>
+            <tr>
+                <td>3:00 PM</td>
+                <td>Project Presentation</td>
+                <td>Main Hall</td>
+                <td>Judging Panel</td>
+            </tr>
+            <tr>
+                <td>4:30 PM</td>
+                <td>Closing Ceremony</td>
+                <td>Main Hall</td>
+                <td>Event Coordinator</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Section 3: Registration Form -->
+    <section id="register">
+        <h2>Registration</h2>
+
+        <form action="register.html" method="post">
+
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname">
+            <br><br>
+            <label for="matric">Matric Number:</label>
+            <input type="text" id="matric" name="matric">
+            <br><br>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email">
+            <br><br>
+
+            <p>Year of Study:</p>
+            <input type="radio" id="year1" name="year" value="Year 1">
+            <label for="year1">Year 1</label>
+            <input type="radio" id="year2" name="year" value="Year 2">
+            <label for="year2">Year 2</label>
+            <input type="radio" id="year3" name="year" value="Year 3">
+            <label for="year3">Year 3</label>
+            <input type="radio" id="year4" name="year" value="Year 4">
+            <label for="year4">Year 4</label>
+
+            <p>Sessions You Want to Join:</p>
+
+            <input type="checkbox" id="html" name="sessions" value="HTML Workshop">
+            <label for="html">HTML Workshop</label>
+            <br>
+            <input type="checkbox" id="project" name="sessions" value="Mini Project">
+            <label for="project">Mini Project Challenge</label>
+            <br>
+            <input type="checkbox" id="presentation" name="sessions" value="Presentation">
+            <label for="presentation">Project Presentation</label>
+            <br><br>
+
+            <label for="programme">Programme or Faculty:</label>
+
+            <select id="programme" name="programme">
+                <option value="">-- Please Select --</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Software Engineering">Software Engineering</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Information Technology">Information Technology</option>
+            </select>
+
+            <br><br>
+
+            <input type="submit" value="Register">
+
+        </form>
+    </section>
+
+    <!-- Footer: Organiser and copyright -->
+    <footer>
+        <p>Organised by the Comtech Committee.</p>
+        <p>&copy; 2026 Faculty Technology Day</p>
+    </footer>
+
+</body>
+</html>
