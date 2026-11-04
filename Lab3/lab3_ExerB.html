@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking</title>
+</head>
+
+<body>
+    <!--ERROR IDENTIFICATION:
+    Error 1 (Line 1): Missing html in <!DOCTYPE html>.
+    Error 2 (Line 9): Incorrect nesting of <span> inside <h1>.
+    Error 3 (Line 11): <span> used instead of <div> for content.
+    Error 4 (Line 13): Missing semicolon in &amp; entity.
+    Error 5 (Line 14): Addition joins numbers as text instead of adding them.
+    Error 6 (Line 18): Incorrect input type "emial"; should be "email".
+    Error 7 (Line 18): Email field is missing required attribute.
+    Error 8 (Line 22-26): Datalist ID does not match the input list attribute.
+    Error 9 (Line 32): Range slider has reversed min and max values.
+    Error 10 (Line 33): Incorrect for attribute; should reference adult and child.
+    Error 11 (Line 38): Incorrect copyright entity capitalization.
+    Error 12: Extra duplicated closing body and html tags.
+    -->
+    
+    <!-- HEADER SECTION -->
+    <div id="header">
+        <h1>
+            e-Ticket
+            <span>Your Campus Cinema</span>
+        </h1>
+    </div>
+
+    <!-- CONTENT SECTION -->
+    <div id="content">
+        <h2>Book Your Ticket</h2>
+        <p>
+            Promotion: tickets &lt; RM10 for students &amp; staff!
+        </p>
+
+        <!-- TICKET BOOKING FORM -->
+        <form
+            action="#"
+            oninput="
+            total.value = Number(adult.value) + Number(child.value);
+            price.value = (Number(adult.value) * 12 + Number(child.value) * 8).toFixed(2);
+            ">
+
+            <!-- Name -->
+            <label for="name">Name:</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+                autofocus>
+            <br><br>
+
+            <!-- Email -->
+            <label for="email">E-mail:</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required>
+            <br><br>
+
+            <!-- Phone Number -->
+            <label for="phone">Phone Number:</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter your phone number"
+                required>
+            <br><br>
+
+            <!-- Show Date -->
+            <label for="date">Show Date:</label>
+            <input
+                type="date"
+                id="date"
+                name="date">
+            <br><br>
+
+            <!-- Show Time -->
+            <label for="time">Show Time:</label>
+            <input
+                type="time"
+                id="time"
+                name="time">
+            <br><br>
+
+            <!-- Movie Selection -->
+            <label for="movie">Movie:</label>
+            <input
+                type="text"
+                id="movie"
+                name="movie"
+                list="movies">
+
+            <datalist id="movies">
+                <option value="Space Rangers">
+                <option value="Kampung Comedy">
+                <option value="The Last Adventure">
+            </datalist>
+
+            <br><br>
+
+            <!-- Adult Tickets -->
+            <label for="adult">Adult Tickets:</label>
+            <input
+                type="number"
+                id="adult"
+                name="adult"
+                min="0"
+                value="0">
+            <br><br>
+
+            <!-- Child Tickets -->
+            <label for="child">Child Tickets:</label>
+            <input
+                type="number"
+                id="child"
+                name="child"
+                min="0"
+                value="0">
+            <br><br>
+
+            <!-- Rating Slider -->
+            <label for="rating">Rate Our Service:</label>
+            <input
+                type="range"
+                id="rating"
+                name="rating"
+                min="1"
+                max="5"
+                step="1">
+            <br><br>
+
+            <!-- Total Ticket Calculation -->
+            <label>Total Tickets:</label>
+            <output
+                name="total"
+                for="adult child">0</output>
+
+            <br><br>
+
+            <!-- Total Price Calculation -->
+            <label>Total Price: RM </label>
+            <output
+                name="price"
+                for="adult child">0.00</output>
+
+            <br><br>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Book Now">
+        </form>
+    </div>
+
+    <!-- SIDEBAR SECTION -->
+    <div id="sidebar">
+        <h2>Now Showing</h2>
+        <ul>
+            <li>
+                <strong>Space Rangers</strong>
+                <span>PG</span>
+                <a href="https://www.youtube.com/results?search_query=space+rangers+trailer">
+                    Watch Trailer
+                </a>
+            </li>
+
+            <li>
+                <strong>Kampung Comedy</strong>
+                <span>U</span>
+                <a href="https://www.youtube.com/results?search_query=kampung+comedy+trailer">
+                    Watch Trailer
+                </a>
+            </li>
+
+            <li>
+                <strong>The Last Adventure</strong>
+                <span>13+</span>
+                <a href="https://www.youtube.com/results?search_query=adventure+movie+trailer">
+                    Watch Trailer
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <div id="footer">
+        <p>
+            e-Ticket&reg; &ndash; Campus Cinema &lt; RM10 every Tuesday
+        </p>
+        <p>
+            &copy; 2026 CineKampus. All rights reserved.
+        </p>
+    </div>
+</body>
+</html>

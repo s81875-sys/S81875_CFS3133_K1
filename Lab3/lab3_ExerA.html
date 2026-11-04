@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusBake Online Order</title>
+</head>
+
+<body>
+    <!-- 1. HEADER SECTION -->
+    <div id="header">
+        <h1>
+            CampusBake  <span> ( Reverse Stressed = Desserts!! ) </span>
+        </h1>
+        <p>Welcome to CampusBake Online Ordering System.</p>
+    </div>
+
+    <!-- 2. NAVIGATION SECTION -->
+    <div id="nav">
+        <a href="#home">Home</a> |
+        <a href="#order">Order Now</a> |
+        <a href="#prices">Price List</a>
+    </div>
+
+    <!-- 3. CONTENT SECTION -->
+    <div id="content">
+
+        <h2 id="home">Welcome to CampusBake!</h2>
+        <p>
+            Enjoy our <strong>delicious bakery products</strong>
+            made with <em>fresh ingredients</em>.
+            We offer <span>affordable prices</span> for students.
+            Visit our <a href="#order">online order form</a>
+            to place your order today!
+        </p>
+
+        <h2>Our Bakery Products</h2>
+        <ul>
+            <li>Chocolate Cupcakes</li>
+            <li>Vanilla Cupcakes</li>
+            <li>Strawberry Cake Slices</li>
+            <li>Chocolate Cake Slices</li>
+        </ul>
+
+        <!-- 5. ORDER FORM -->
+        <div id="order">
+            <h2>Customer Order Form</h2>
+            <form oninput="this.elements.namedItem('total').value =
+                ((this.elements.namedItem('cupcakes').valueAsNumber || 0) * 3 +
+                (this.elements.namedItem('cakeSlices').valueAsNumber || 0) * 5).toFixed(2)">
+
+                <!-- Customer Name -->
+                <label for="customerName">Customer Name:</label>
+                <input
+                    type="text"
+                    id="customerName"
+                    name="customerName"
+                    placeholder="Enter your full name"
+                    required
+                    autofocus>
+                <br><br>
+
+                <!-- Phone Number -->
+                <label for="phone">Phone Number:</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                    required>
+                <br><br>
+
+                <!-- Email -->
+                <label for="email">E-mail:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required>
+                <br><br>
+
+                <!-- Pick-up Date -->
+                <label for="date">Pick-up Date:</label>
+                <input
+                    type="date"
+                    id="date"
+                    name="date">
+                <br><br>
+
+                <!-- Pick-up Time -->
+                <label for="time">Pick-up Time:</label>
+                <input
+                    type="time"
+                    id="time"
+                    name="time">
+                <br><br>
+
+                <!-- Flavour with Datalist -->
+                <label for="flavour">Choose Flavour:</label>
+                <input
+                    type="text"
+                    id="flavour"
+                    name="flavour"
+                    list="flavours"
+                    placeholder="Select your flavour">
+
+                <datalist id="flavours">
+                    <option value="Chocolate">
+                    <option value="Vanilla">
+                    <option value="Strawberry">
+                    <option value="Blueberry">
+                </datalist>
+
+                <br><br>
+
+                <!-- Icing Colour -->
+                <label for="colour">Icing Colour:</label>
+                <input
+                    type="color"
+                    id="colour"
+                    name="colour">
+                <br><br>
+
+                <!-- Sweetness Level -->
+                <label for="sweetness">Sweetness Level:</label>
+                <input
+                    type="range"
+                    id="sweetness"
+                    name="sweetness"
+                    min="1"
+                    max="5"
+                    step="1"
+                    value="3">
+                <br><br>
+
+                <!-- 6. PRICE CALCULATOR -->
+                <h2>Price Calculator</h2>
+                <!-- Cupcakes Quantity -->
+                <label for="cupcakes">Cupcakes (RM 3.00 each):</label>
+                <input
+                    type="number" 
+                    id="cupcakes"
+                    name="cupcakes" 
+                    min="0" value="0">
+                <br><br>
+                <!-- Cake Slices Quantity -->
+                <label for="cakeSlices">Cake Slices (RM 5.00 each):</label>
+                <input
+                    type="number"
+                    id="cakeSlices"
+                    name="cakeSlices"
+                    min="0"
+                    value="0">
+                <br><br>
+
+                <!-- Display Total Price -->
+                <label>Total Price: RM </label>
+                <output
+                    name="total"
+                    for="cupcakes cakeSlices">0.00</output>
+
+                <br><br>
+                <!-- Submit Button -->
+                <input type="submit" value="Submit Order">
+
+            </form>
+        </div>
+    </div>
+    <!-- 4. SIDEBAR SECTION -->
+    <div id="sidebar">
+        <h2 id="prices">Price List</h2>
+        <ul>
+            <li>Chocolate Cupcake - RM 3.00</li>
+            <li>Vanilla Cupcake - RM 3.00</li>
+            <li>Strawberry Cake Slice - RM 5.00</li>
+            <li>Chocolate Cake Slice - RM 5.00</li>
+        </ul>
+
+        <p>
+            Orders &gt; 10 pieces get a free drink!
+        </p>
+
+        <p>
+            All prices include&nbsp;fresh ingredients.
+        </p>
+
+        <p>
+            CampusBake&reg; offers affordable bakery products.
+        </p>
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <div id="footer">
+        <p>
+            &copy; 2026 CampusBake. All rights reserved.
+        </p>
+    </div>
+
+    <!-- 8. TESTING OBSERVATIONS -->
+    <!--
+    Testing Observations:
+
+    1. When the Submit button is clicked with all required
+       fields empty, the browser displays a validation message
+       asking the user to fill in the required fields.
+
+    2. When "myemail" is entered into the email field,
+       the browser rejects it because it is not a valid
+       email format.
+
+    3. The total price is calculated automatically
+       when the cupcake or cake slice quantity changes.
+    -->
+
+</body>
+</html>
