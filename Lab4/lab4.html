@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DiveSphere - Diving Community</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            background-color: #eaf8fa;
+        }
+
+        h2 {
+            text-decoration: underline;
+        }
+
+        .welcome {
+            text-align: center;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>DiveSphere</h1>
+        <p>Discover the Beauty Beneath the Ocean</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#video">Explore</a></li>
+            <li><a href="#contact">Join Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Welcome Section -->
+    <section id="home" class="welcome">
+        <h2>Welcome to DiveSphere!</h2>
+
+        <p>
+            Welcome to DiveSphere, a community for people
+            who love exploring the underwater world.
+            Discover amazing marine life, beautiful coral
+            reefs and exciting diving experiences with us.
+        </p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+
+        <article>
+            <h3>Our Mission</h3>
+
+            <p>
+                Our mission is to encourage people to explore
+                the ocean while learning about marine life
+                and protecting the underwater environment.
+            </p>
+        </article>
+
+        <article>
+            <h3>Why Choose Diving?</h3>
+
+            <p>
+                Diving allows us to experience the beauty
+                of the ocean, discover marine creatures
+                and create unforgettable memories.
+            </p>
+        </article>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video">
+        <h2>Explore the Ocean</h2>
+
+        <p>Watch a video and discover the underwater world.</p>
+
+        <div class="video-container">
+            <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/uto5o5ILTX0?si=XIgoZW7czrO4Urf7" 
+            title="YouTube video player" 
+            frameborder="0" allow="accelerometer; 
+            autoplay; clipboard-write; encrypted-media; 
+            gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </div>
+
+        <p class="caption">
+            Video: An example of an embedded video.
+        </p>
+    </section>
+
+    <!-- Contact and Registration Form -->
+    <section id="contact">
+        <h2>Join Our Community</h2>
+
+        <p>Interested in joining DiveSphere? Fill in the form below!</p>
+
+        <form action="#" method="post">
+
+            <!-- Name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"
+                   placeholder="Enter your name" required>
+
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email" required>
+
+            <!-- Gender -->
+            <label>Gender:</label>
+
+            <div class="options">
+                <input type="radio" id="male" name="gender"
+                       value="Male">
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="gender"
+                       value="Female">
+                <label for="female">Female</label>
+            </div>
+
+            <!-- Favorite Hobbies -->
+            <label>Favorite Hobbies:</label>
+
+            <div class="options">
+                <input type="checkbox" id="diving"
+                       name="hobbies" value="Diving">
+                <label for="diving">Diving</label>
+
+                <input type="checkbox" id="swimming"
+                       name="hobbies" value="Swimming">
+                <label for="swimming">Swimming</label>
+
+                <input type="checkbox" id="photography"
+                       name="hobbies" value="Photography">
+                <label for="photography">Photography</label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 DiveSphere. All Rights Reserved.</p>
+        <p>Explore More. Discover More. Dive More.</p>
+    </footer>
+
+</body>
+</html>
+
