@@ -1,0 +1,221 @@
+
+
+/* GENERAL STYLING */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #087E83;
+    color: #F5F5F5;
+    text-align: center;
+    line-height: 1.7;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #101820, #164E56, #087E83);
+    color: white;
+    padding: 60px 20px;
+}
+
+header h1 {
+    color: #F4C95D;
+    font-size: 42px;
+    letter-spacing: 3px;
+    text-decoration: overline;
+}
+
+header p {
+    color: #FFFFFF;
+    font-size: 19px;
+}
+
+/* NAVIGATION BAR */
+nav {
+    background-color: #172B36;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+nav a:link,
+nav a:visited {
+    color: #FFFFFF;
+}
+
+nav a:hover {
+    background-color: #00A6A6;
+    color: #101820;
+}
+
+nav a:active {
+    background-color: #F4C95D;
+    color: #101820;
+}
+
+/* GENERAL SECTIONS */
+section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px 20px;
+}
+
+h2 {
+    color: #5DE0D2;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    color: #F4C95D;
+}
+
+/* DESTINATIONS */
+#destinations {
+    background-color: #172B36;
+    border-radius: 15px;
+}
+
+.card {
+    background-color: #263D49;
+    padding: 25px;
+    margin: 20px 0;
+    border: 1px solid #3B6570;
+    border-radius: 12px;
+}
+
+.card p {
+    color: #E1E9EC;
+    text-align: center;
+}
+
+.price {
+    color: #F4C95D;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.old-price {
+    color: #B7B7B7;
+    text-decoration: line-through;
+}
+
+/* VIDEO */
+#video {
+    background-color: #172B36;
+    border-radius: 15px;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.caption {
+    color: #C5DADD;
+    text-align: center;
+    font-style: italic;
+}
+
+/* TRIP FORM */
+#trip {
+    background-color: #172B36;
+    border-radius: 15px;
+}
+
+.trip-form {
+    background-color: #263D49;
+    color: #FFFFFF;
+    padding: 30px;
+    border: 2px solid #00A6A6;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.trip-form input[type="text"],
+.trip-form input[type="email"] {
+    padding: 10px;
+    width: 90%;
+    background-color: #F5F5F5;
+    color: #101820;
+    border: 1px solid #5DE0D2;
+    border-radius: 5px;
+}
+
+.trip-form input[type="radio"],
+.trip-form input[type="checkbox"] {
+    accent-color: #00A6A6;
+}
+
+.trip-form input[type="submit"] {
+    background-color: #00A6A6;
+    color: #FFFFFF;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.trip-form input[type="submit"]:hover {
+    background-color: #F4C95D;
+    color: #101820;
+}
+
+/* FOOTER */
+footer {
+    background-color: #080F14;
+    color: #FFFFFF;
+    padding: 25px;
+}
+
+footer a:link,
+footer a:visited {
+    color: #5DE0D2;
+}
+
+footer a:hover {
+    color: #F4C95D;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 600px) {
+    nav li {
+        display: block;
+    }
+
+    .trip-form {
+        width: 95%;
+    }
+
+    section {
+        width: 95%;
+    }
+}
+

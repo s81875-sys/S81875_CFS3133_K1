@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Café Campus</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="cafe.css">
+</head>
+
+<body>
+    <!-- Error Identification -->
+    <!-- Error 1 (Line 9): list-style-type: no should be none. -->
+    <!-- Error 2 (Line 13-16): Link states are in the wrong order. -->
+    <!-- Error 3 (Line 17): overlined should be overline. -->
+    <!-- Error 4 (Line 18): Missing colon after color. -->
+    <!-- Error 5 (Line 22): Missing dot before highlight class. -->
+    <!-- Error 6 (Line 26): Missing closing brace for #intro. -->
+    <!-- Error 7 (Line 34): href="menu" should be href="#menu". -->
+    <!-- Error 8 (Line 41): HTML uses class="intro" but CSS uses #intro. -->
+    <!-- Error 9 (Line 46): Duplicate id="item" should use class. -->
+    <!-- Error 10 (Line 53): Video is missing controls. -->
+    <!-- Error 11 (Line 54): type="mp4" should be type="video/mp4". -->
+
+    <!-- Header Section -->
+    <header>
+        <h1>e-Café Campus</h1>
+        <p>Good Food, Great Coffee, Happy Moments!</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <h2>Today's Menu</h2>
+        <p class="intro">
+            Freshly brewed coffee and local delights every day.
+        </p>
+
+        <div class="menu-container">
+            <article class="item">
+                <h3>Kopi Tarik</h3>
+                <img src="kopi.jpg" width="300" height="300">
+                <p>Traditional Malaysian pulled coffee.</p>
+                <p>
+                    <span class="old-price">RM 4.50</span>
+                    <span class="highlight">RM 3.50</span>
+                </p>
+            </article>
+
+            <article class="item">
+                <h3>Nasi Lemak</h3>
+                <img src="nasilemak.jpg" width="300" height="300">
+                <p>Fragrant coconut rice served with sambal.</p>
+                <p>
+                    <span class="old-price">RM 7.00</span>
+                    <span class="highlight">RM 5.00</span>
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video">
+        <h2>Watch Our Story</h2>
+        <figure>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/a8GFAgljWRc?si=U8j-v8FJvAy7SkNN" 
+                title="YouTube video player" frameborder="0" allow="accelerometer;
+                autoplay; clipboard-write; encrypted-media; gyroscope; 
+                picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <figcaption>
+                Discover the food, coffee and atmosphere
+                of e-Café Campus.
+            </figcaption>
+        </figure>
+    </section>
+
+    <!-- Feedback Form Section -->
+    <section id="feedback">
+
+        <h2>Share Your Experience</h2>
+        <img class="feedback-image"
+             src="cafe.jpg"
+             alt="Cosy café interior">
+
+        <p>
+            We would love to hear about your experience!
+            Share your thoughts with us.
+        <form class="feedback-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <p>Visit Type:</p>
+            <input type="radio" id="dinein"
+                name="visit" value="Dine-in">
+            <label for="dinein">Dine-in</label>
+            <input type="radio" id="takeaway"
+                name="visit" value="Take-away">
+            <label for="takeaway">Take-away</label>
+
+            <p>Favourite Items:</p>
+            <input type="checkbox" id="coffee"
+                name="favourite" value="Coffee">
+            <label for="coffee">Coffee</label>
+            <input type="checkbox" id="food"
+                name="favourite" value="Food">
+            <label for="food">Food</label>
+            <input type="checkbox" id="dessert"
+                name="favourite" value="Dessert">
+            <label for="dessert">Dessert</label>
+
+            <br><br>
+            <input type="submit" value="Submit Feedback">
+
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact">
+        <p>&copy; 2026 e-Café Campus. All Rights Reserved.</p>
+        <address>
+            Contact us:
+            <a href="mailto:ecafe@example.com">
+                ecafe@example.com
+            </a>
+        </address>
+    </footer>
+</body>
+</html>
