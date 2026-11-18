@@ -1,0 +1,157 @@
+/* GENERAL PAGE STYLING */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #F2F2F2;
+    color: #333;
+}
+
+/* HEADER SECTION */
+header {
+    background-image: url("books.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-color: #1B4F72;
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+header h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    text-align: center;
+    font-size: 15px;
+}
+
+/* NAVIGATION BAR */
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    float: left;
+}
+nav li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 18px;
+}
+
+/* Navigation hover effect */
+nav li a:hover {
+    background-color: #111;
+}
+
+/* Active Home link */
+nav li a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* MAIN CONTENT */
+main {
+    width: 90%;
+    max-width: 980px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+h2 {
+    font-family: 'Merriweather', serif;
+    color: #1B4F72;
+    border-left: 4px solid #04AA6D;
+    padding-left: 10px;
+}
+p {
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* PRODUCT TABLE*/
+#products {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#products td,
+#products th {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+/* Table header */
+#products th {
+    background-color: #04AA6D;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* Alternating row colours */
+#products tr:nth-child(even) {
+    background-color: #F2F2F2;
+}
+
+/* Table hover effect */
+#products tr:hover {
+    background-color: #ddd;
+}
+
+/* Price column */
+#products .price {
+    text-align: right;
+}
+
+/* FOOTER*/
+footer {
+    background-color: #EAEAEA;
+    color: #333;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+footer p {
+    text-align: center;
+    margin: 5px;
+}
+footer a {
+    color: #1B4F72;
+    text-decoration: none;
+}
+
+/* RESPONSIVE DESIGN*/
+@media screen and (max-width: 600px) {
+    main {
+        width: 95%;
+    }
+    header h1 {
+        font-size: 24px;
+    }
+    nav li {
+        float: none;
+        display: inline-block;
+    }
+    #products th,
+    #products td {
+        padding: 7px;
+        font-size: 12px;
+    }
+}
