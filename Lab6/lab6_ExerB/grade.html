@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Grade Calculator</title>
+
+    <!-- Link external CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<!-- Error Identification -->
+<!-- Error 1 (grade.html) line 9: The form onsubmit function does not prevent the page from refreshing. It should use return checkMark(event). -->
+<!-- Error 2 (grade.html) line 17: The function name showtable() does not match the correct JavaScript function name showTable(). -->
+<!-- Error 3 (grade.js) line 5: The assignment operator (=) is incorrectly used to compare the name. It should use the comparison operator (===). -->
+<!-- Error 4 (grade.js) line 9: isNan() is incorrectly capitalized. It should be isNaN(). -->
+<!-- Error 5 (grade.js) line 14: The logical operator && is incorrect for validating the mark range. It should use || to check marks below 0 or above 100. -->
+<!-- Error 6 (grade.js) line 28: getElementByID() is incorrectly capitalized. It should be getElementById(). -->
+<!-- Error 7 (grade.js) line 30: style.colour is incorrect. It should be style.color. -->
+<!-- Error 8 (grade.js) line 38: The loop starts at index 1, causing the first grade to be skipped. It should start at index 0. -->
+<!-- Error 9 (grade.js) line 42: innerHtml is incorrectly capitalized. It should be innerHTML. -->
+<!-- Error 10 (grade.js): Missing validation for an empty mark field. An alert should be displayed when the mark field is empty. -->
+<body>
+
+    <!-- Main heading -->
+    <header>
+        <h1>Student Grade Calculator</h1>
+        <p>Enter your name and marks to calculate your grade.</p>
+    </header>
+
+    <!-- Student input form -->
+    <section class="calculator">
+
+        <h2>Calculate Your Grade</h2>
+
+        <form name="gradeForm" onsubmit="return checkMark(event)">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"
+                   placeholder="Enter your name">
+
+            <label for="mark">Mark (0-100):</label>
+            <input type="text" id="mark" name="mark"
+                   placeholder="Enter your mark">
+
+            <div class="buttons">
+                <button type="submit">Check Grade</button>
+
+                <button type="button" onclick="randomMark()">
+                    Random Mark
+                </button>
+            </div>
+
+        </form>
+
+        <!-- Display result -->
+        <p id="result"></p>
+
+        <!-- Display checking date and time -->
+        <p id="checkTime"></p>
+
+    </section>
+
+    <!-- Grade table section -->
+    <section class="grade-section">
+
+        <h2>Grade Reference Table</h2>
+
+        <button type="button" onclick="showTable()">
+            Show Grade Table
+        </button>
+
+        <div id="tableContainer"></div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Student Grade Calculator</p>
+    </footer>
+
+    <!-- Link external JavaScript -->
+    <script src="grade.js"></script>
+
+</body>
+</html>

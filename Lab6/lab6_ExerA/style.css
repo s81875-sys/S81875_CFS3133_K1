@@ -1,0 +1,135 @@
+
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef3f8;
+    margin: 0;
+    padding: 20px;
+    color: #263746;
+    text-align: center;
+}
+
+/* Header styling */
+header {
+    background-color: #204d6b;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+/* Section styling */
+section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 850px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* Input styling */
+input {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+/* Button styling */
+button {
+    background-color: #2878a8;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #164766;
+}
+
+/* Game choice buttons */
+.choice-buttons {
+    margin: 20px;
+}
+
+/* Player and computer images */
+.game-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 25px;
+}
+
+.game-images img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 2px solid #d6e1e9;
+    background-color: #f5f8fa;
+    padding: 10px;
+}
+
+/* Scoreboard styling */
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-weight: bold;
+}
+
+/* History table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+th, td {
+    border: 1px solid #b8c8d4;
+    padding: 12px;
+}
+
+th {
+    background-color: #204d6b;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #edf3f7;
+}
+
+/* Footer styling */
+footer {
+    color: #667785;
+    font-size: 13px;
+    margin-top: 30px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    .game-images {
+        gap: 12px;
+    }
+
+    .scoreboard {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .game-images img {
+        width: 85px;
+        height: 85px;
+    }
+}
